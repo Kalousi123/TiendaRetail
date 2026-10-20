@@ -1,0 +1,29 @@
+{
+  "name": "tienda-retail",
+  "version": "1.0.0",
+  "description": "Sistema web de gestión integral para tienda de retail",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test tests/features-unit.mjs && node tests/run.mjs",
+    "db:migrate": "node scripts/migrate.js",
+    "db:import": "node scripts/import-sqlite.js",
+    "evidence:cleanup": "node scripts/cleanup-evidence.js",
+    "test:unit": "node --test tests/features-unit.mjs",
+    "db:admin": "node scripts/create-admin.js",
+    "db:admin:clave": "node scripts/set-admin-password.js"
+  },
+  "engines": {
+    "node": ">=22.5"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@zxing/browser": "^0.2.1",
+    "@zxing/library": "^0.23.0",
+    "busboy": "^1.6.0",
+    "mysql2": "^3.24.5",
+    "sharp": "^0.35.5"
+  }
+}

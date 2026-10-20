@@ -1,0 +1,16 @@
+node_modules/
+.mysql-test/
+data/*.db
+data/*.db-shm
+data/*.db-wal
+*.log
+.env
+data/evidence/
+data/backups/
+agent/publish/
+agent/**/bin/
+agent/**/obj/
+agent/**/appsettings.json
+agent/**/journal/
+
+ck.txt

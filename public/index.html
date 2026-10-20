@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda Retail · Sistema de Gestión</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="login-screen" class="login-screen hidden">
+    <form id="login-form" class="login-card">
+      <div class="login-logo">TR</div>
+      <h1 id="login-titulo">Tienda Retail</h1>
+      <p id="login-lema">Inicia sesión para gestionar tu negocio</p>
+      <label>
+        <span>Usuario</span>
+        <input type="text" id="login-usuario" required autocomplete="username" placeholder="admin" />
+      </label>
+      <label>
+        <span>Contraseña</span>
+        <input type="password" id="login-clave" required autocomplete="current-password" placeholder="••••••" />
+      </label>
+      <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+      <p class="login-error" id="login-error"></p>
+      <div class="login-hint">
+        <p>Demo: <b>admin</b>/<b>admin123</b> · <b>asesor</b>/<b>asesor123</b> · <b>tecnico</b>/<b>tecnico123</b></p>
+      </div>
+    </form>
+  </div>
+
+  <div id="app" class="app hidden">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <span class="brand-logo">TR</span>
+        <div>
+          <b id="brand-nombre">Tienda Retail</b>
+          <small id="brand-lema">Gestión integral</small>
+        </div>
+      </div>
+      <nav class="nav" id="nav"></nav>
+      <div class="sidebar-footer">
+        <div class="user-chip">
+          <div class="avatar" id="user-avatar">A</div>
+          <div class="user-meta">
+            <b id="user-nombre">Admin</b>
+            <small id="user-rol">admin</small>
+            <small class="user-sucursal" id="user-sucursal">Sin sucursal</small>
+          </div>
+          <button class="icon-btn" id="btn-logout" title="Cerrar sesión">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5M21 12H9"/></svg>
+          </button>
+        </div>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <h2 id="page-title">Dashboard</h2>
+        <div class="topbar-right" id="topbar-right"></div>
+      </header>
+      <section class="content" id="content"></section>
+    </main>
+  </div>
+
+  <div id="modal-root"></div>
+  <div id="toast-root"></div>
+
+  <div class="print-only" id="print-area"></div>
+
+  <script src="barcode.js"></script>
+  <script src="vendor/zxing-browser.min.js"></script>
+  <script src="scan-gate.js"></script>
+  <script src="devices.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
